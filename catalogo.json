@@ -1,0 +1,38 @@
+[
+  {
+    "id": "KA022B199",
+    "producto": "Empanadas Carne",
+    "imgUrl": "https://images.pexels.com/photos/6680905/pexels-photo-6680905.jpeg",
+    "precio": "987"
+  },
+  {
+    "id": "DA010N699",
+    "producto": "Empanadas J y Q",
+    "imgUrl": "https://images.pexels.com/photos/6680905/pexels-photo-6680905.jpeg",
+    "precio": "3465"
+  },
+  {
+    "id": "LA011B439",
+    "producto": "Empanadas de Verdura",
+    "imgUrl": "https://images.pexels.com/photos/6680905/pexels-photo-6680905.jpeg",
+    "precio": "2336"
+  },
+  {
+    "id": "LA010E2249",
+    "producto": "Copetin de Carne",
+    "imgUrl": "https://images.pexels.com/photos/6680905/pexels-photo-6680905.jpeg",
+    "precio": "11147"
+  },
+  {
+    "id": "KA022C149",
+    "producto": "Copetin de J y Q",
+    "imgUrl": "https://www.silverbestprice.com/wp-content/uploads/2019/10/Arete-opalo-mexicano-KA022C149-2.jpg",
+    "precio": "738"
+  },
+  {
+    "id": "HA034A559",
+    "producto": "Copetin de Verdura",
+    "imgUrl": "https://www.silverbestprice.com/wp-content/uploads/2019/10/Topacio-rosa-HA034A559-3.jpg",
+    "precio": "2276"
+  }
+]

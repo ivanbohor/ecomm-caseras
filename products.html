@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="app.js" defer></script>
+    <script src="carrousel.js" defer></script>
+    <title>Caseras Las Empandas</title>
+  </head>
+  <body>
+    <!-- agrego header y nav !-->
+    <header>
+      <div class="container">
+        <!-- navbar -->
+        <nav class="navbar">
+          <a href="index.html" class="navbar-brand">
+            <!-- Caseras <br />
+            Las Empandas.</a> -->
+            <img src="./img/Caseralogo.png" alt="logo" class="logo"
+          /></a>
+          <button type="button" class="navbar-toggler">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="navbar-collapse">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#sec-ele">Sobre Nosotros</a></li>
+              <li><a href="#">Pedir Ya</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+        
+
+          <div class="cart">
+            <button type="button" id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count-info"></span>
+            </button>
+
+            <div class="cart-container">
+              <div class="cart-list">
+
+
+
+                <section class="container content-section">
+                  <h2 class="section-header">PEDIDO</h2>
+                  <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">Prod</span>
+                    <span class="cart-precio cart-header cart-column">Precio</span>
+                    <span class="cart-cantidad cart-header cart-column">Cant</span>
+                  </div>
+                  <div class="cart-items"></div>
+                  <div class="cart-total">
+                    <strong class="cart-total-text">Total</strong>
+                    <span class="cart-total-precio">$0</span>
+                  </div>
+                  <button class="btn btn-primary btn-purchase" type="button">
+                    COMPRAR
+                  </button>
+                </section>
+                <!-- single item -->
+                <!-- <div class = "cart-item">
+                  <img src = "images/armchair.png" alt = "product image">
+                  <div class = "cart-item-info">
+                    <h3 class = "cart-item-name">Arm Chair</h3>
+                    <span class = "cart-item-category">Chair</span>
+                    <span class = "cart-item-price">$120.00</span>
+                  </div>
+
+                  <button type = "button" class = "cart-item-del-btn">
+                    <i class = "fas fa-times"></i>
+                  </button>
+                </div> -->
+                <!-- end of single item  -->
+              </div>
+            </div>
+          </div>
+            <!-- excluyo "cart-container y list" !-->
+          </div>
+        </nav>
+      </header>
+        <section class="container content-section">
+            <div class="catalogo-items" id="misProductos"></div>
+          </section>
+      
+         <!-- <section class="container content-section">
+            <h2 class="section-header">PEDIDO</h2>
+            <div class="cart-row">
+              <span class="cart-item cart-header cart-column">PRODUCTO</span>
+              <span class="cart-precio cart-header cart-column">PRECIO</span>
+              <span class="cart-cantidad cart-header cart-column">CANT</span>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+              <strong class="cart-total-text">Total</strong>
+              <span class="cart-total-precio">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">
+              COMPRAR
+            </button>
+          </section>  -->
+    </body>
+    
+    </html>
+    

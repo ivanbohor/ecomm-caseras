@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/63715a3b61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script src="carrousel.js" defer></script>
+    <title>Caseras Las Empandas</title>
+  </head>
+
+  <body>
+    <!-- agrego header y nav !-->
+    <header>
+      <div class="conta-carru">
+        <!-- navbar -->
+        <nav class="navbar">
+          <a href="index.html" class="navbar-brand">
+            <!-- Caseras <br />
+            Las Empandas.</a> -->
+            <img src="./img/Caseralogo.png" alt="logo" class="logo"
+          /></a>
+          <button type="button" class="navbar-toggler">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="navbar-collapse">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#sec-ele">Sobre Nosotros</a></li>
+              <li><a href="#">Pedir Ya</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="cart">
+            <button type="button" id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count-info"></span>
+            </button>
+            <!-- excluyo "cart-container y list" !-->
+          </div>
+        </nav>
+        <!-- end of navbar -->
+        <!-- banner 
+        <div class="banner">
+          <div class="banner-content">
+            <h1>Furniture For Your Home</h1>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+              eveniet, quis nisi recusandae assumenda ea sequi obcaecati
+              accusantium in provident dolore debitis autem neque vel commodi
+              atque voluptates incidunt aliquam delectus veritatis?
+              Exercitationem, fugit sed!
+            </p>
+            <div class="btns">
+              <button type="button" class="btn">know more</button>
+              <button type="button" class="btn">more info</button>
+            </div>
+          </div>
+
+          <div class="banner-img"></div>
+        </div>                  PRUEBA -->
+
+        <div class="carrousel" style="--object-fit: cover">
+          <div class="content-cen">
+            <div class="carru-tex1">
+              <h1>Tenes un Evento? Lleva empanadas o copetin de Caseras</h1>
+              <div class="carru-text2">
+                <h3>Pedilas yayaya lorem ipsum dolor sit ametlorem ipsum dolor</h3>
+                <p>
+                  lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem 
+                </p>
+              </div>
+            </div>
+            
+            <div class="content-bot">
+              <div class="btns">
+                <button type="button" class="btn"><a href="./products.html">Pedir Ya</a></button>
+                <button type="button" class="btn"><a href="#contact">  Contacto</a></button>
+              </div>
+            </div>
+          </div>
+            
+
+
+          <div class="slides">
+            <img src="./img/empaback.jpg" />
+            <img src="./img/empaback2.jpg" />
+            <img src="./img/empaback3.jpg" />
+            <img src="./img/empaback4.jpg" />
+          </div>
+        </div>
+
+        <!-- end of banner  -->
+      </div>
+    </header>
+    <section id="minban">
+    <div class="conta-minban">
+      <div class="banner-barra">
+        <div class="sec">
+          <div class="sec-img"> <img src="./img/minban1.png" alt="item"></div>
+          <div class="sec-text"><h4>Envios A Domicilio</h4><span>Envios a todo Capital Federal</span> </div>
+        </div>
+        <div class="sec">
+          <div class="sec-img"> <img src="./img/minban2.png" alt="item"></div>
+          <div class="sec-text"><h4>Take A Way</h4> <span> Retira tu pedido en nuestro local de Paternal (CABA)</span></div>
+        </div>
+        <div class="sec">
+          <div class="sec-img"> <img src="./img/minban3.png" alt=""></div>
+          <div class="sec-text"><h4>Medios de Pago</h4> <span>Efectivo/Transf./MercadoPago-Debito</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- end of header -->
+
+    <section id="sec-about">
+      <div class="container container content-section">
+      <div class="sabo">
+        <div class="text-prin">
+          <h2 class="h2-title">Nuestros Sabores</h2>
+          <p>Los cuatros sabores clasicos que no pueden faltar, preparados de manera artesanal, 100% caseras y con materias prima de excelente calidad</p>
+        </div>     
+        <div class="bloqsabo">
+          <div class="sobotx">
+            <h3>Carne</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime reprehenderit. </p>
+          </div>
+          <div class="saboimg">
+            <img src="./img/empaback.jpg" alt="sabores">
+          </div>
+        </div>
+        <div class="bloqsabo" style="flex-direction: row-reverse;
+        ">
+          <div class="sobotx">
+            <h3>Pollo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime reprehenderit. </p>
+          </div>
+          <div class="saboimg">
+            <img src="./img/empaback.jpg" alt="sabores">
+          </div>
+        </div>
+        <div class="bloqsabo">
+          <div class="sobotx">
+            <h3>Jamon y Queso</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime reprehenderit. </p>
+          </div>
+          <div class="saboimg">
+            <img src="./img/empaback.jpg" alt="sabores">
+          </div>
+        </div>
+        <div class="bloqsabo" style="flex-direction: row-reverse;" >
+          <div class="sobotx">
+            <h3>Caprese</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime reprehenderit. </p>
+          </div>
+          <div class="saboimg">
+            <img src="./img/empaback.jpg" alt="sabores">
+          </div>
+        </div>
+
+         
+        
+      </div>
+    </div>
+    </section>
+
+
+
+
+    <section id="sec-about">
+      <div class="container container content-section">
+      <div class="about">
+        <div class="text-prin">
+          <h2 class="h2-title">Pedilas como mas te gusten!</h2>
+          <p>Lorem ipsum elit. Quos minima ratione expedita provident est dolorem dignissimos ea temporibus beatae amet officiis,
+            Vitae</p>
+        </div>        
+        <div class="bloq abo">
+          <div class="coci">
+            <div class="conte-about">
+              <h3>Cocidas al horno</h3>
+              <p>
+                Lista para disfrutar Tus empanadas se mantienen frescas y
+                preparadas para que les des el ultimo golpe
+              </p>
+            </div>
+          </div>
+          <div class="cru">
+            <div class="conte-about">
+              <h3>Lista para hornear</h3>
+              <p>
+                Tus empanadas se mantienen frescas y preparadas para que les des
+                el ultimo golpe
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    </section>
+    <section id="sec-ele" >
+      <div class="container eleji-section">
+      <div class="bloq abo" style="height: auto;">
+        <div class="boxes">
+
+          <img src="./img/boxes1.jpg" alt="comida">
+          <h3>Calidad de la buenarda</h3>
+
+          <span>neque quae adipisci optio explicabo lorem ipsum dolor sit amet  Lorem i. Excepturi, cumque illo.</span>
+        </div>
+        <div class="boxes">
+          <img src="./img/boxes2.jpg" alt="comida">
+          <h3>Calidad de la buenarda</h3>
+          <span>neque quae adipisci optio explicabo lorem ipsum dolor sit amet  Lorem i. Excepturi, cumque illo.</span>
+
+        </div>
+        <div class="boxes">
+          <img src="./img/boxes3.jpg" alt="comida">
+          <h3>Calidad de la buenarda</h3>
+          <span>neque quae adipisci optio explicabo lorem ipsum dolor sit amet  Lorem i. Excepturi, cumque illo.</span>
+
+        </div>
+        <div class="text-prin">
+          <h2 class="h2-title">Porque Elejirnos?</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minima ratione expedita provident est dolorem dignissimos ea temporibus beatae amet officiis,
+              nulla voluptate? Vitae</p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+    <section id="sec-clien">
+      <div class="container clientes-sec">
+      <div class="conta-cli">
+        <h2 style="width:160px">Lo que Dicen Nuestros Clientes</h2>
+
+        <div class="boxpri">
+          <img src="./img/opiprin.png" alt="opiniones">
+        </div>
+        <div class="box-opi"> <img src="./img/opi1.png" alt="opiniones"></div>
+        <div class="box-opi"><img src="./img/opi2.png" style="height: 95px;" alt="opiniones"></div>
+        <div class="box-opi"><img src="./img/opii3.png" style="height: 100px;" alt="opiniones"></div>
+
+      </div>
+    </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-banner">
+        <div class="container sec-foo" id="contact">
+          <div class="text-prin text-msj">
+            <h2>Contacto</h2>
+            <h4>Alguna duda o pedido 
+            especial? Hablemos!</h4>
+            <i class="fa-solid fa-phone"> <n> 011 454422111</i>
+          </div>
+         <div class="boxescon">
+            <div class="con"><i class="fa-regular fa-envelope"></i>Email <br><span>caseraslasmepa@</span>  <a>Enviar Mensaje</a></div>
+            <div class="con"><i class="fa-brands fa-whatsapp"></i>Whatsapp <br>+54 112392 <a>Enviar Mensaje</a></div>
+            <div class="con"><i class="fa-brands fa-facebook-messenger"></i><a>Enviar Mensaje</a></div>
+         </div> 
+         <div class="ubica">
+          <h4>Ubicacion</h4>
+          <h5>Alvarez Jonte 1859 (CABA)</h5>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069956840988!2d-58.471977484839314!3d-34.60239248045978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6020e5fc08b%3A0x82848d875622e3cc!2sAv.%20%C3%81lvarez%20Jonte%201859%2C%20C1416EXD%20CABA!5e0!3m2!1ses-419!2sar!4v1655844272810!5m2!1ses-419!2sar" width="300" height="200" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div> 
+        </div>
+         
+    </div>
+    <div class="foo-redes">
+      <div class="social-icons">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+      </div>
+
+    </div>
+    <span class="bra">Diseño y desarrollo por Ivan Bohorquez</span>
+
+
+    </footer>
+    <!-- end of footer -->
+
+
+    
+
+
+
+  </body>
+</html>
