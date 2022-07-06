@@ -345,7 +345,7 @@ a{
 }
 header .container{
     flex-direction: column;
-}
+    overflow-y: auto;}
 .navbar{
   border-radius: 0px 0px 10px 10px;  
     position: fixed;
@@ -364,8 +364,7 @@ header .container{
     padding: 1.5rem 0;
     z-index: 999;
     background: #ff9800;
-    opacity: 0.9;
-
+    opacity: 0.96;
 }
 .navbar-brand{
     font-size: 1.5rem;
@@ -373,6 +372,19 @@ header .container{
     color: var(--granite-gray);
     justify-self: center;
 }
+
+/*responsive notebook */
+@media screen and (min-width:1000px) and (max-width: 1200px){
+  .navbar{
+    height: 21%;  }
+    .logo{
+      width: 100px;
+      height: 80px;
+    }
+   }
+
+
+
 /* nav index*/
 @media screen and (min-width: 1000px){
   .navbar-toggler{
@@ -616,7 +628,6 @@ header .container{
 
 .btn-primary {
   color: white;
-  background-color: #3aa52c;
   border: none;
   border-radius: 0.3em;
   font-weight: bold;
@@ -632,6 +643,8 @@ header .container{
   border: none;
   border-radius: 0.3em;
   font-weight: bold;
+  width: auto;
+  font-size:10px;
 }
 
 .btn-danger:hover {
@@ -640,6 +653,7 @@ header .container{
 
 .shop-item {
   margin: 30px;
+  width: 200px;
 }
 
 .shop-item-title {
@@ -655,6 +669,7 @@ header .container{
 
 .shop-item-image {
   height: 250px;
+  border-radius: 20px;
 }
 
 .shop-item-details {
@@ -848,6 +863,12 @@ padding: 1rem;
     flex-direction: column;
     justify-content: space-around;
 }
+/* responsive en note  */
+@media screen and (max-width: 1300px){
+  .boxescon{
+    justify-content: center;
+  }
+   }
 .boxescon a{
   cursor: pointer;
 font-size:12px;
@@ -891,10 +912,11 @@ footer .bra{
 /* PRODUCTS */
 
 
-
+.cart-list{
+  height: 100vh;
+}
 .cart{
-  justify-self: flex-end;
-  padding-right: 8px;
+  justify-self: center;
 }
 #cart-btn{
   border: none;
@@ -925,15 +947,18 @@ footer .bra{
 .cart-container{
   position: absolute;
   overflow-y: scroll;
-  background: #fff;
-  width: 100%;
-  height: 600px;
-  top: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
+  width: 50%;
+    height: auto;
+    top: 0;
+        left: 50%;
+    right: 0;
   display: none;
+  box-shadow: -11px 12px 18px -9px rgba(0,0,0,0.42);
+-webkit-box-shadow: -11px 12px 18px -9px rgba(0,0,0,0.42);
+-moz-box-shadow: -11px 12px 18px -9px rgba(0,0,0,0.42);
+background: #ffff89;
 }
+
 .cart-container::-webkit-scrollbar{
   width: 8px;
 }
@@ -950,14 +975,15 @@ footer .bra{
   display: block;
 }
 /*  */
+#close-car{
+  background: none;
+    border: none;
+    font-size: 25px;
+}
 .cart-item{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 0.5rem;
+ 
   align-items: center;
   position: relative;
-  padding: 1.2rem 0.6rem;
-  height: 140px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
 }
 .cart-item:last-child{
@@ -979,7 +1005,7 @@ footer .bra{
   -o-border-radius: 5px;
 }
 .cart-item img{
-  width: 80px;
+  width: 70px;
 }
 .cart-item-info{
   text-align: center;
@@ -1003,15 +1029,27 @@ footer .bra{
   font-size: 1.3rem;
   font-weight: 500;
 }
+.tuped{
+  display: inline-flex;
+  gap: 1rem;
+}
+
 
 /* responsive mobile */
+
+/* responsive mobile FOR MIN*/
+
 
 
 /* carrusel */
 
-@media only screen and (max-width: 740px) and (min-width: 320px)  { 
+@media only screen and (max-width: 1024px) and (min-width: 320px)  { 
   .navbar-toggler {
     margin-left: 1rem;
+  }
+  .logo{
+    width: 90px;
+    height: 70px;
   }
   .show-navbar{
     background-color: #ffeb5b ;
@@ -1036,7 +1074,10 @@ footer .bra{
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+.carru-tex1 h1{
+  font-size: 32px;
 }
 
 .content-bot{
@@ -1153,8 +1194,40 @@ footer .bra{
   font-size: 16px;
 }
 /*ecommerce whats responsive */ 
-.shop-item-image{
-  border-radius:20px;
+
+.cart-container{
+  left: 0;
+width: 100%;
+
 }
+.cart-item{
+  width: 50%;
+
+}
+.cart-cantidad{
+  width: auto;
+
+}
+.cart-cantidad-input{
+
+  height: 30px;
+  width: 30px;
+  margin-right: 0px;
+}
+.btn-danger{
+  font-size: 10px;
+  position: relative;
+  bottom: 50px;
+  left: 25px;
+}
+
+
+.cart-item img{
+  width: 90px;
+    height: 50%;
+
+}
+
+
 
 }

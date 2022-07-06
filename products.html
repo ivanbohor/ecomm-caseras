@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font awesome cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/63715a3b61.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="styles.css" />
 
     <script src="app.js" defer></script>
@@ -31,9 +28,8 @@
           </button>
           <div class="navbar-collapse">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#sec-ele">Sobre Nosotros</a></li>
-              <li><a href="#">Pedir Ya</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html">Sobre Nosotros</a></li>
               <li><a href="#contact">Contacto</a></li>
             </ul>
           </div>
@@ -51,9 +47,13 @@
 
 
                 <section class="container content-section">
-                  <h2 class="section-header">PEDIDO</h2>
+                  <div class="tuped">
+                    <h2 class="section-header">Tu Pedido</h2>  <!-- <button type="button" id="close-car"><span id="close-car"></span>x</button> -->
+                    <button type="button" id="close-car">  <i class="fa-solid fa-circle-arrow-left"></i></button>
+
+                  </div>
                   <div class="cart-row">
-                    <span class="cart-item cart-header cart-column">Prod</span>
+                    <span class="cart-item cart-header cart-column">Item</span>
                     <span class="cart-precio cart-header cart-column">Precio</span>
                     <span class="cart-cantidad cart-header cart-column">Cant</span>
                   </div>
@@ -107,6 +107,51 @@
               COMPRAR
             </button>
           </section>  -->
+
+
+
+          <footer>
+            <div class="footer-banner">
+              <div class="container sec-foo" id="contact">
+                <div class="text-prin text-msj">
+                  <h2>Contacto</h2>
+                  <h4>Alguna duda o pedido 
+                  especial? Hablemos!</h4>
+                  <i class="fa-solid fa-phone"> <n> 011 454422111</i>
+                </div>
+               <div class="boxescon">
+                  <div class="con"><i class="fa-regular fa-envelope"></i>Email <br><span>caseraslasmepa@</span>  <a>Enviar Mensaje</a></div>
+                  <div class="con"><i class="fa-brands fa-whatsapp"></i>Whatsapp <br>+54 112392 <a>Enviar Mensaje</a></div>
+               </div> 
+               <div class="ubica">
+                <h4>Ubicacion</h4>
+                <h5>Alvarez Jonte 1859 (CABA)</h5>
+                <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069956840988!2d-58.471977484839314!3d-34.60239248045978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6020e5fc08b%3A0x82848d875622e3cc!2sAv.%20%C3%81lvarez%20Jonte%201859%2C%20C1416EXD%20CABA!5e0!3m2!1ses-419!2sar!4v1655844272810!5m2!1ses-419!2sar" width="300" height="200" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div> 
+              </div>
+               
+          </div>
+          <div class="foo-redes">
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              
+            </div>
+      
+          </div>
+          <span class="bra">Diseño y desarrollo por Ivan Bohorquez</span>
+      
+      
+          </footer>
     </body>
     
     </html>

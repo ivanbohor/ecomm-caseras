@@ -139,6 +139,10 @@ function updateCartTotal() {
 }
 
 // NAV //
+//agrego close //
+
+const closeCart = document.querySelector(".close-car");
+
 const cartContainer = document.querySelector(".cart-container");
 const productList = document.querySelector(".product-list");
 const cartList = document.querySelector(".cart-list");
@@ -161,6 +165,11 @@ function eventListeners() {
 
   // show/hide cart container
   document.getElementById("cart-btn").addEventListener("click", () => {
+    cartContainer.classList.toggle("show-cart-container");
+  });
+
+  //agrego option  close button //
+  document.getElementById("close-car").addEventListener("click", () => {
     cartContainer.classList.toggle("show-cart-container");
   });
 
