@@ -1,18 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Raleway;
-  color: #777;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-lineas abajo agrego reemplazo  */
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stoke&display=swap');
 
@@ -44,8 +29,6 @@ body{
 
 }
 
-
-
 /* TEXT STYLE */
 .h2-title{
   font-size: 38px;
@@ -59,7 +42,6 @@ body{
   flex-direction: column;
   gap: 1rem;
 }
-
 
 img{
   display: block;
@@ -321,8 +303,6 @@ img{
    align-items: center;
 }
 
-
-
 a{
   text-decoration: none;
   color: #000;
@@ -383,8 +363,6 @@ header .container{
     }
    }
 
-
-
 /* nav index*/
 @media screen and (min-width: 1000px){
   .navbar-toggler{
@@ -434,9 +412,6 @@ header .container{
   }
 
 }
-
-
-
 .navbar-toggler{
     justify-self: center;
     border: none;
@@ -453,17 +428,6 @@ header .container{
     position: relative;
 }
 .navbar-collapse{
-   /* position: absolute;
-    top: 100%;
-    left: 50%;
-    height: 0;
-    overflow: hidden;
-    transform: translateX(-50%);
-     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);*/
-
     width: 100%;
     transition: var(--trans);
     -webkit-transition: var(--trans);
@@ -543,7 +507,6 @@ header .container{
   color: #fff;
 }
 
-
 /* SECTION ELEJIRNOS */
 .eleji-section{
   height: 80vh;
@@ -579,9 +542,6 @@ header .container{
   .boxes img{
     width: 240px;
   }
-  .boxes{
-  }
-  
 }
 
 /* Section Clientes*/
@@ -602,22 +562,15 @@ header .container{
 .boxpri{
   width:250px;
 
-
 }
 .box-opi{
   width: 300px;
   align-self: center;
   display: inline-block;
 }
-
-  /* hasta aca */ 
-
 .content-section {
- /*  margin: 1em; */
  background-color: #ffff89;
 }
-
-
 .btn {
   text-align: center;
   vertical-align: middle;
@@ -796,7 +749,6 @@ header .container{
   display: block;
   font-size: 1rem;
 }
-/*# sourceMappingURL=styles.css.map */
 
 .sec-foo{
   display: flex;
@@ -815,7 +767,7 @@ footer{
     background-color: var(--baltic-sea);
 }
 .footer-banner{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/footer-banner.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     padding: 3rem 0;
 }
 .footer-banner{
@@ -1034,12 +986,62 @@ background: #ffff89;
   gap: 1rem;
 }
 
+/*CHECKS OPTIONS */
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;   
+}
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+}
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+.radio-custom + .radio-custom-label:before {
+  border-radius: 20%;
+}
+.radio-custom:checked + .radio-custom-label:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+}
 
+/* agrego icono de pay y entrega */
+#checkEntrega{
+  width: 200px;
+  color: #626a6a;
+
+}
+.dire{
+  width: 250px;
+}
+.dire #input{
+  background: border-box;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 5px;
+
+}
+/* #checkEntrega span {
+  color: #626a6a;
+} */
 /* responsive mobile */
 
 /* responsive mobile FOR MIN*/
-
-
 
 /* carrusel */
 
@@ -1134,7 +1136,6 @@ background: #ffff89;
 }
 .conte-about{
   font-size: 18px;
-
 }
 .conte-about p{
   display: none;
@@ -1151,7 +1152,6 @@ background: #ffff89;
 
 }
 
-
 /* Clientes Section RESPONSIVE */
 .conta-cli{
   width: auto;
@@ -1167,49 +1167,38 @@ background: #ffff89;
 .conta-cli{
   flex-wrap: wrap;
   gap: 1.5rem;
-
 }
-
-
 /* FOOTER RESPONSIVE */
 .footer-banner{
   height: 100%;
-
 }
 .sec-foo{
   display: flex;
   justify-content: flex-start;
   gap: 2rem;
   flex-direction: column;
-
 }
 .boxescon{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
 }
 .bra{
   font-size: 16px;
 }
 /*ecommerce whats responsive */ 
-
 .cart-container{
-  left: 0;
+left: 0;
 width: 100%;
-
 }
 .cart-item{
   width: 50%;
-
 }
 .cart-cantidad{
   width: auto;
-
 }
 .cart-cantidad-input{
-
   height: 30px;
   width: 30px;
   margin-right: 0px;
@@ -1220,14 +1209,10 @@ width: 100%;
   bottom: 50px;
   left: 25px;
 }
-
-
 .cart-item img{
   width: 90px;
     height: 50%;
 
 }
-
-
 
 }

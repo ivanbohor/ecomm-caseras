@@ -52,10 +52,16 @@ function removeCartItem(event) {
   buttonClicked.parentElement.parentElement.remove();
   updateCartTotal();
 }
+/* agregos intento de checks */
+
+/* HASTA ACA */
+
 function purchaseClicked() {
   let buyProducts = document.getElementsByClassName("cart-item-title");
   let buyPrices = document.getElementsByClassName("cart-precio");
   let buyQuantity = document.getElementsByClassName("cart-cantidad-input");
+  /* agregos  checks */
+  let losChecks = document.getElementById("checkEntrega");
 
   let pedido = `Pedido :%0D%0A`;
 
@@ -65,16 +71,16 @@ function purchaseClicked() {
     } * ${buyPrices[i + 1].innerText}]%0D%0A`;
   }
 
-  pedido = `${pedido}*TOTAL ${
+  pedido = `${pedido}  *TOTAL ${
     document.getElementsByClassName("cart-total-precio")[0].innerText
-  }*`;
+  } + ${losChecks.innerText} *`; /* agrego text de Checks */
 
   var cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild);
   }
   updateCartTotal();
-  window.open(`https://wa.me/5491131155989?text=${pedido}`, "_blank");
+  window.open(`https://wa.me/5491123920404?text=${pedido}`, "_blank");
 }
 /*CAMBIO EN WINDOW OPEN DE https://wa.me/${cellPhoneNumber}?text=${pedido} A PONER DIRECTO EL NUMERO  */
 
@@ -137,45 +143,56 @@ function updateCartTotal() {
   document.getElementsByClassName("cart-total-precio")[0].innerText =
     "$" + total;
 }
-
 // NAV //
-//agrego close //
-
-const closeCart = document.querySelector(".close-car");
-
 const cartContainer = document.querySelector(".cart-container");
 const productList = document.querySelector(".product-list");
 const cartList = document.querySelector(".cart-list");
 const cartTotalValue = document.getElementById("cart-total-value");
 const cartCountInfo = document.getElementById("cart-count-info");
 let cartItemID = 1;
+// toggle navbar when toggle button is clicked
+document.querySelector(".navbar-toggler").addEventListener("click", () => {
+  document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
+});
 
-eventListeners();
+// show/hide cart container
+document.getElementById("cart-btn").addEventListener("click", () => {
+  cartContainer.classList.toggle("show-cart-container");
+});
 
-// all event listeners
-function eventListeners() {
-  window.addEventListener("DOMContentLoaded", () => {
-    loadJSON();
-    loadCart();
-  });
-  // toggle navbar when toggle button is clicked
-  document.querySelector(".navbar-toggler").addEventListener("click", () => {
-    document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
-  });
-
-  // show/hide cart container
-  document.getElementById("cart-btn").addEventListener("click", () => {
-    cartContainer.classList.toggle("show-cart-container");
-  });
-
-  //agrego option  close button //
-  document.getElementById("close-car").addEventListener("click", () => {
-    cartContainer.classList.toggle("show-cart-container");
-  });
-
-  // add to cart
-  productList.addEventListener("click", purchaseProduct);
-
-  // delete from cart
-  cartList.addEventListener("click", deleteProduct);
+//agrego option  close button //
+document.getElementById("close-car").addEventListener("click", () => {
+  cartContainer.classList.toggle("show-cart-container");
+});
+//  muesto la direccion si check envio///
+function entregaCheck() {
+  var checkBox1 = document.getElementById("radio-1");
+  var checkBox = document.getElementById("radio-2");
+  var text = document.getElementById("dire");
+  if (checkBox.checked == true) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+  if (checkBox1.checked == true) {
+    text.style.display = "none";
+  }
 }
+/* selecciono los checks tildados */
+function getValue() {
+  var checkboxes = document.querySelectorAll(".radio-custom");
+  var result = "";
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      result += checkboxes[i].value;
+    }
+  }
+  document.getElementById("checkEntrega").innerText = result;
+}
+/* direcion copy */
+input.oninput = function () {
+  checkEntrega.textContent = input.value;
+  /* o innet.Text o textContent
+  document.documentElement.textContent
+  */
+};
