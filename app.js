@@ -7,6 +7,12 @@ fetch("catalogo.json")
   })
   .then(function (datos) {
     appenddata(datos);
+    /* intengo de guardar en local storage
+    if (localStorage.getItem("carrlist")) {
+      carrito = JSON.parse(localStorage.getItem("carrlist"));
+      addItemToCart(); */
+
+    /* hasta aca  */
   })
   .catch(function (err) {
     console.log(err);
@@ -14,7 +20,7 @@ fetch("catalogo.json")
 
 function appenddata(datos) {
   const contenedor = document.getElementById("misProductos");
-
+  /* pinto los productos en el market  */
   for (let i = 0; i < datos.length; i++) {
     const productDiv = document.createElement("div");
     productDiv.className = "shop-item";
@@ -23,7 +29,7 @@ function appenddata(datos) {
         <img class="shop-item-image" src="${datos[i].imgUrl}">
           <div class="shop-item-details">
             <span class="shop-item-price">$${datos[i].precio}</span>
-            <button class="btn btn-primary shop-item-button" type="button">AÑADIR</button>
+            <button value="+1" onClick="contadorCar();" class="btn btn-primary shop-item-button" aria-label="agregar pedir" type="button">AÑADIR</button>
           </div>`;
     contenedor.appendChild(productDiv);
   }
@@ -52,9 +58,6 @@ function removeCartItem(event) {
   buttonClicked.parentElement.parentElement.remove();
   updateCartTotal();
 }
-/* agregos intento de checks */
-
-/* HASTA ACA */
 
 function purchaseClicked() {
   let buyProducts = document.getElementsByClassName("cart-item-title");
@@ -62,6 +65,9 @@ function purchaseClicked() {
   let buyQuantity = document.getElementsByClassName("cart-cantidad-input");
   /* agregos  checks */
   let losChecks = document.getElementById("checkEntrega");
+  /* agrego dire y altu (TENDRIA QUE UNIFICARLOS) */
+  let direData = document.getElementById("dirr");
+  let altuData = document.getElementById("altu");
 
   let pedido = `Pedido :%0D%0A`;
 
@@ -73,7 +79,8 @@ function purchaseClicked() {
 
   pedido = `${pedido}  *TOTAL ${
     document.getElementsByClassName("cart-total-precio")[0].innerText
-  } + ${losChecks.innerText} *`; /* agrego text de Checks */
+  } + ${losChecks.innerText} + ${direData.innerText} + ${altuData.innerText}
+   *`; /* agrego text de Checks y ahora ACTUALIZO agrego direData y altuData */
 
   var cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
@@ -93,7 +100,18 @@ function addToCartClicked(event) {
   addItemToCart(title, price, imageSrc);
   updateCartTotal();
 }
+/* INTENTO DE CONTADOR */
+var contador = 0;
+function contadorCar() {
+  contador++;
+  document.getElementById("cart-count-info").innerHTML = contador;
+}
+function desconCar() {
+  contador--;
+  document.getElementById("cart-count-info").innerHTML = contador;
+}
 
+/* pinto los items en el carrito que (clickeo) addtocartClicked agrega */
 function addItemToCart(title, price, imageSrc) {
   var productDiv = document.createElement("div");
   productDiv.classList.add("cart-row");
@@ -113,7 +131,7 @@ function addItemToCart(title, price, imageSrc) {
       <span class="cart-precio cart-column">${price}</span>
       <div class="cart-cantidad cart-column">
           <input class="cart-cantidad-input" type="number" value="1">
-          <button class="btn btn-danger" type="button">x</button>
+          <button id="elim" class="btn btn-danger" aria-label="eliminar" type="button" onClick="desconCar();" >x</button>
       </div>`;
   productDiv.innerHTML = productDivContents;
   cartItems.append(productDiv);
@@ -123,6 +141,7 @@ function addItemToCart(title, price, imageSrc) {
   productDiv
     .getElementsByClassName("cart-cantidad-input")[0]
     .addEventListener("change", quantityChanged);
+  /* agrego intento de local storage */
 }
 
 function updateCartTotal() {
@@ -145,11 +164,13 @@ function updateCartTotal() {
 }
 // NAV //
 const cartContainer = document.querySelector(".cart-container");
-const productList = document.querySelector(".product-list");
+
+/* const productList = document.querySelector(".product-list");
 const cartList = document.querySelector(".cart-list");
 const cartTotalValue = document.getElementById("cart-total-value");
 const cartCountInfo = document.getElementById("cart-count-info");
-let cartItemID = 1;
+let cartItemID = 1; */
+
 // toggle navbar when toggle button is clicked
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
   document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
@@ -164,11 +185,11 @@ document.getElementById("cart-btn").addEventListener("click", () => {
 document.getElementById("close-car").addEventListener("click", () => {
   cartContainer.classList.toggle("show-cart-container");
 });
-//  muesto la direccion si check envio///
+//  si se selecciona "Envio"  ///
 function entregaCheck() {
-  var checkBox1 = document.getElementById("radio-1");
-  var checkBox = document.getElementById("radio-2");
-  var text = document.getElementById("dire");
+  let checkBox1 = document.getElementById("radio-1");
+  let checkBox = document.getElementById("radio-2");
+  let text = document.getElementById("dire");
   if (checkBox.checked == true) {
     text.style.display = "block";
   } else {
@@ -178,7 +199,12 @@ function entregaCheck() {
     text.style.display = "none";
   }
 }
-/* selecciono los checks tildados */
+
+/* cuando haga click en el chek de "Retiro" que los input de 
+    envio->direcion/altura se borren o reseteen */
+/* const checkBox1 = document.getElementById("radio-1"); /* retiro */
+/* const checkEnvio = document.getElementById("radio-2"); /* selec envio */
+
 function getValue() {
   var checkboxes = document.querySelectorAll(".radio-custom");
   var result = "";
@@ -189,10 +215,23 @@ function getValue() {
   }
   document.getElementById("checkEntrega").innerText = result;
 }
-/* direcion copy */
-input.oninput = function () {
-  checkEntrega.textContent = input.value;
-  /* o innet.Text o textContent
-  document.documentElement.textContent
-  */
+/* Copia direc y alt ingresada  ORIGINALL ACA-DESPUES ACTIVAR */
+function direData(val) {
+  document.getElementById("dirr").innerHTML = val;
+}
+function altuData(val) {
+  document.getElementById("altu").innerHTML = val;
+}
+
+/* intento numero mil de invaldar los input  */
+
+/* const checkBox1 = document.getElementById("radio-1"); 
+const checkEnvio = document.getElementById("radio-2"); 
+const inputDir = document.getElementById("input");
+const showAddressInformation = (e) => {
+  if (e.target === checkBox1 && e.target.checked) {
+    inputDir.value = "";
+  }
 };
+
+checkBox1.addEventListener("change", showAddressInformation); */

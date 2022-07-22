@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Stoke&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Stoke&display=swap');
+
 
 :root{
   --ghost-white: #f8f9fd;
@@ -8,7 +8,6 @@
   --baltic-sea: #33383c;
   --trans: all 0.5s ease-in-out;
 }
-
 *{
   padding: 0;
   margin: 0;
@@ -17,6 +16,10 @@
 body{
   line-height: 1.5;
   font-weight: 400;
+
+}
+html {
+  scroll-behavior: smooth;
 }
 /*sections colors */
 #sec-about{
@@ -52,6 +55,8 @@ img{
   height: 100px;
   border-radius:20px;
 }
+
+
 /*CARROUCEL PRUEB */
 .carrousel .arrow-right{
   display: none;
@@ -77,6 +82,8 @@ img{
   width: 70%;
     flex-direction: column;
     font-size: 1.5rem;
+    backdrop-filter: brightness(77%) blur(5px);
+    text-align: center;
 }
 /* responsive en note  */
 @media screen and (max-width: 1200px){
@@ -282,8 +289,8 @@ img{
   font-size: larger;
     color: aliceblue;
     opacity: 1;
-    backdrop-filter: contrast(55%);
-}
+    backdrop-filter: brightness(77%) blur(8px);
+  }
 .coci{
   width: 40%;
   background-image: url(./img/about-co.jpg);
@@ -352,6 +359,14 @@ header .container{
     color: var(--granite-gray);
     justify-self: center;
 }
+.cart{
+  display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+
+}
+
 
 /*responsive notebook */
 @media screen and (min-width:1000px) and (max-width: 1200px){
@@ -386,13 +401,20 @@ header .container{
     z-index: 1;
     justify-content: space-between;
     font-family: 'Grand Hotel', cursive;
+    gap: 3rem;
   }
   .navbar-collapse li{
     display: flex;
     
   }
+  .redes-nav{
+    display: flex;
+    gap: 1rem;
+    font-size:21px
+  }
   .cart{
-    justify-self: center;
+  
+
   }
 }
 
@@ -867,9 +889,7 @@ footer .bra{
 .cart-list{
   height: 100vh;
 }
-.cart{
-  justify-self: center;
-}
+
 #cart-btn{
   border: none;
   font-size: 1.5rem;
@@ -1061,6 +1081,9 @@ background: #ffff89;
   .navbar-collapse li{
     margin: 1.5rem 0;
   }
+  .redes-nav{
+    display: none;
+  }
   .h2-title {
     font-size: 32px;
   } 
@@ -1076,10 +1099,13 @@ background: #ffff89;
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  text-align: center;
 }
 .carru-tex1 h1{
-  font-size: 32px;
+  font-size: 35px;
+}
+.carru-text2 h3{
+  display: none;
 }
 
 .content-bot{

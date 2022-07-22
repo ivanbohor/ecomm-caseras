@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <!-- font awesome cdn -->
     <script src="https://kit.fontawesome.com/63715a3b61.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
     <script src="carrousel.js" defer></script>
     <title>Caseras Las Empandas</title>
+    <meta name="description" content="Empanadas, copetin y pizetas artesanales, la comida ideal para tu evento o reunion. Atencion a catering">
+
   </head>
 
   <body>
@@ -18,51 +19,39 @@
         <!-- navbar -->
         <nav class="navbar">
           <a href="index.html" class="navbar-brand">
-            <!-- Caseras <br />
-            Las Empandas.</a> -->
             <img src="./img/Caseralogo.png" alt="logo" class="logo"
           /></a>
-          <button type="button" class="navbar-toggler">
+          <button type="button" aria-label="menu" class="navbar-toggler">
             <i class="fas fa-bars"></i>
           </button>
           <div class="navbar-collapse">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li style="align-self: center;"  ><a href="#">Home</a></li>
               <li><a href="#sec-ele">Sobre Nosotros</a></li>
               <li><a href="./products.html">Pedir Ya</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <li style="align-self: center;" ><a href="#contact">Contacto</a></li>
             </ul>
           </div>
 
           <div class="cart">
-            <button type="button" id="cart-btn">
-              <i class="fas fa-shopping-cart"></i>
-              <span id="cart-count-info"></span>
-            </button>
-            <!-- excluyo "cart-container y list" !-->
-          </div>
-        </nav>
-        <!-- end of navbar -->
-        <!-- banner 
-        <div class="banner">
-          <div class="banner-content">
-            <h1>Furniture For Your Home</h1>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              eveniet, quis nisi recusandae assumenda ea sequi obcaecati
-              accusantium in provident dolore debitis autem neque vel commodi
-              atque voluptates incidunt aliquam delectus veritatis?
-              Exercitationem, fugit sed!
-            </p>
-            <div class="btns">
-              <button type="button" class="btn">know more</button>
-              <button type="button" class="btn">more info</button>
+            <div>
+              <button type="button" id="cart-btn">
+                <a href="./products.html"><i class="fas fa-shopping-cart" style="color: azure;"></i>
+              </a>
+              </button>
+            </div>
+            <div class="redes-nav">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
-
-          <div class="banner-img"></div>
-        </div>                  PRUEBA -->
-
+          
+          
+        </nav>
         <div class="carrousel" style="--object-fit: cover">
           <div class="content-cen">
             <div class="carru-tex1">
@@ -74,17 +63,13 @@
                 </p>
               </div>
             </div>
-            
             <div class="content-bot">
               <div class="btns">
-                <button type="button" class="btn"><a href="./products.html">Pedir Ya</a></button>
-                <button type="button" class="btn"><a href="#contact">  Contacto</a></button>
+                <button type="button" aria-label="productos pedir" class="btn"><a href="./products.html">Pedir Ya</a></button>
+                <button type="button" aria-label="contacto" class="btn"><a href="#contact">  Contacto</a></button>
               </div>
             </div>
           </div>
-            
-
-
           <div class="slides">
             <img src="./img/empaback.jpg" alt="empanada" />
             <img src="./img/empaback2.jpg" alt="empanada"/>
@@ -92,7 +77,6 @@
             <img src="./img/empaback4.jpg"alt="empanada" />
           </div>
         </div>
-
         <!-- end of banner  -->
       </div>
     </header>
@@ -293,5 +277,7 @@
     <span class="bra">Diseño y desarrollo por Ivan Bohorquez</span>
     </footer>
     <!-- end of footer -->
+    <script src="app.js" defer  ></script>
+
   </body>
 </html>

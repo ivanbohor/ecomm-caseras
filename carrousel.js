@@ -7,8 +7,8 @@ class Carrousel {
     fullViewMax: '<i class="fa-solid fa-maximize"></i>',
     fullViewMin: '<i class="fa-solid fa-minimize"></i>',
     slidePlay: '<i class="fa-solid fa-play"></i>',
-    slidePause: '<i class="fa-solid fa-pause"></i>',
-    controlsHide: '<i class="fa-solid fa-eye-slash"></i>',
+    slidePause: '<i class="fa-solid fa-pause" style="display: none></i>',
+    controlsHide: '<i class="fa-solid fa-eye-slash"style="display: none></i>',
     controlsShow: '<i class="fa-solid fa-eye"></i>',
   };
 
