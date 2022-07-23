@@ -32,6 +32,23 @@ html {
 
 }
 
+/* PRUEBA ARREGLEO FIX OPTIONS CART */
+#info {
+
+  display: none;
+}
+
+#dirr {
+}
+
+#info.show, #dirr.show {
+  display: block;
+}
+
+
+
+
+
 /* TEXT STYLE */
 .h2-title{
   font-size: 38px;
@@ -84,6 +101,7 @@ img{
     font-size: 1.5rem;
     backdrop-filter: brightness(77%) blur(5px);
     text-align: center;
+    border-radius: 10px;
 }
 /* responsive en note  */
 @media screen and (max-width: 1200px){
@@ -1046,7 +1064,8 @@ background: #ffff89;
   color: #626a6a;
 
 }
-.dire{
+#dire{
+  display: none;
   width: 250px;
 }
 .dire #input{

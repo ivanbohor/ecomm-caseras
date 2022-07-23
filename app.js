@@ -100,7 +100,7 @@ function addToCartClicked(event) {
   addItemToCart(title, price, imageSrc);
   updateCartTotal();
 }
-/* INTENTO DE CONTADOR */
+/* contador carrito */
 var contador = 0;
 function contadorCar() {
   contador++;
@@ -141,7 +141,6 @@ function addItemToCart(title, price, imageSrc) {
   productDiv
     .getElementsByClassName("cart-cantidad-input")[0]
     .addEventListener("change", quantityChanged);
-  /* agrego intento de local storage */
 }
 
 function updateCartTotal() {
@@ -165,12 +164,6 @@ function updateCartTotal() {
 // NAV //
 const cartContainer = document.querySelector(".cart-container");
 
-/* const productList = document.querySelector(".product-list");
-const cartList = document.querySelector(".cart-list");
-const cartTotalValue = document.getElementById("cart-total-value");
-const cartCountInfo = document.getElementById("cart-count-info");
-let cartItemID = 1; */
-
 // toggle navbar when toggle button is clicked
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
   document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
@@ -186,7 +179,7 @@ document.getElementById("close-car").addEventListener("click", () => {
   cartContainer.classList.toggle("show-cart-container");
 });
 //  si se selecciona "Envio"  ///
-function entregaCheck() {
+/* function entregaCheck() {
   let checkBox1 = document.getElementById("radio-1");
   let checkBox = document.getElementById("radio-2");
   let text = document.getElementById("dire");
@@ -198,7 +191,7 @@ function entregaCheck() {
   if (checkBox1.checked == true) {
     text.style.display = "none";
   }
-}
+} */
 
 /* cuando haga click en el chek de "Retiro" que los input de 
     envio->direcion/altura se borren o reseteen */
@@ -216,14 +209,12 @@ function getValue() {
   document.getElementById("checkEntrega").innerText = result;
 }
 /* Copia direc y alt ingresada  ORIGINALL ACA-DESPUES ACTIVAR */
-function direData(val) {
+/* function direData(val) {
   document.getElementById("dirr").innerHTML = val;
 }
 function altuData(val) {
   document.getElementById("altu").innerHTML = val;
-}
-
-/* intento numero mil de invaldar los input  */
+} */
 
 /* const checkBox1 = document.getElementById("radio-1"); 
 const checkEnvio = document.getElementById("radio-2"); 
@@ -235,3 +226,49 @@ const showAddressInformation = (e) => {
 };
 
 checkBox1.addEventListener("change", showAddressInformation); */
+
+const radioRetiro = document.getElementById("radio-1");
+const radioEnvio = document.getElementById("radio-2");
+const input = document.getElementById("input");
+const divInfo = document.getElementById("info");
+const parrafoDomicilio = document.getElementById("dirr");
+const cajaInfo = document.getElementById("dire");
+
+const parrafoAltu = document.getElementById("altu");
+const inputA = document.getElementById("inputAl");
+
+const showAddressInformation = (e) => {
+  if (e.target === radioEnvio && e.target.checked) {
+    cajaInfo.style.display = "block";
+    divInfo.classList.add("show");
+
+    parrafoDomicilio.innerText = input.value;
+
+    parrafoAltu.innerText = inputA.value;
+
+    input.disabled = false;
+  } else {
+    parrafoDomicilio.innerText = "";
+    parrafoAltu.innerText = "";
+    cajaInfo.style.display = "none";
+
+    divInfo.classList.remove("show");
+    parrafoDomicilio.classList.remove("show");
+
+    input.disabled = true;
+  }
+};
+
+const addAddressToParagraph = (e) => {
+  parrafoDomicilio.innerText = e.target.value;
+};
+
+const addAddressToParagraphAl = (e) => {
+  parrafoAltu.innerText = e.target.value;
+};
+
+radioEnvio.addEventListener("change", showAddressInformation);
+radioRetiro.addEventListener("change", showAddressInformation);
+input.addEventListener("input", addAddressToParagraph);
+
+inputA.addEventListener("input", addAddressToParagraphAl);

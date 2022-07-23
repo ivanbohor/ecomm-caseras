@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-
     <!-- font awesome cdn -->
     <script src="https://kit.fontawesome.com/63715a3b61.js" crossorigin="anonymous"></script>
     <title>Caseras Las Empandas</title>
     <meta name="description" content="Empanadas, copetin y pizetas artesanales, la comida ideal para tu evento o reunion. Atencion a catering">
-
   </head>
   <body>
     <!-- agrego header y nav !-->
@@ -18,8 +16,7 @@
         <!-- navbar -->
         <nav class="navbar">
           <a href="index.html" class="navbar-brand">
-            <!-- Caseras <br />
-            Las Empandas.</a> -->
+            
             <img src="./img/Caseralogo.png" alt="logo" class="logo"
           /></a>
           <button type="button" aria-label="menu" class="navbar-toggler">
@@ -41,7 +38,7 @@
               <div class="cart-list">
                 <section class="container content-section">
                   <div class="tuped">
-                    <h2 class="section-header">Tu Pedido</h2>  <!-- <button type="button" id="close-car"><span id="close-car"></span>x</button> -->
+                    <h2 class="section-header">Tu Pedido</h2> 
                     <button type="button" aria-label="cerrar eliminar" id="close-car">  <i class="fa-solid fa-circle-arrow-left"></i></button>
                   </div>
                   <div class="cart-row">
@@ -58,21 +55,21 @@
                       <div class="entrega">
                         <h4>Quiero:</h4>
                           <div>
-                              <input id="radio-1" class="radio-custom" name="radio-group" type="radio" value="Retiro en el Local &#127978" onclick="entregaCheck(), getValue()" >
+                              <input id="radio-1" class="radio-custom" name="radio-group" type="radio" value="Retiro en el Local &#127978" onclick="getValue()" >
                               <label for="radio-1" class="radio-custom-label">Retirar en el local</label>
                           </div>
                           <div>
-                              <input id="radio-2" class="radio-custom"name="radio-group" type="radio"  style="font-size:100px; color:green;"  value="Envio a domicilio &#127949"  onclick="entregaCheck(), getValue()">
+                              <input id="radio-2" class="radio-custom"name="radio-group" type="radio"  style="font-size:100px; color:green;"  value="Envio a domicilio &#127949"  onclick="getValue()">
                               <label for="radio-2" class="radio-custom-label">Que me lo envien</label>
                           </div>
                       </div>
-                      <div class="dire" id="dire" style="display: none;">
-                        <label for="name">Direccion y Altura:</label>
-                        <input type="text" name="address" id="input" class="direInfo" oninput="direData(this.value)"
-                        minlength="4" maxlength="40" size="20">
-                        <label for="name">Piso/Depto:</label>
-                        <input type="text" name="address" id="input" class="direInfo"
-                        minlength="0" maxlength="10" size="8" oninput="altuData(this.value)">
+                      <div class="dire" id="dire">
+                        <label for="input">Direccion y Altura:</label>
+                        <input type="text" name="address" id="input"
+                        minlength="4" maxlength="40" size="20" disabled>
+                        <label for="inputAl">Piso/Depto:</label>
+                        <input type="text" name="address" id="inputAl" 
+                        minlength="0" maxlength="10" size="8" >
                       </div>
                   
                       <div class="pago">
@@ -87,28 +84,16 @@
                         </div>
                         <div id="checkEntrega">
                         </div>
-                        <div id="dirr"></div>
-                        <div id="altu"></div>
+                        <div id="info">
+                          <div id="dirr"></div>
+                          <div id="altu"></div>
+                        </div>
 
                        </div>
                   <button style="background-color: #25D366;" id="buyWp" aria-label="comprar pedir" class="btn btn-primary btn-purchase" type="button">
                     COMPRAR
                   </button>
                 </section>
-                <!-- single item -->
-                <!-- <div class = "cart-item">
-                  <img src = "images/armchair.png" alt = "product image">
-                  <div class = "cart-item-info">
-                    <h3 class = "cart-item-name">Arm Chair</h3>
-                    <span class = "cart-item-category">Chair</span>
-                    <span class = "cart-item-price">$120.00</span>
-                  </div>
-
-                  <button type = "button" class = "cart-item-del-btn">
-                    <i class = "fas fa-times"></i>
-                  </button>
-                </div> -->
-                <!-- end of single item  -->
               </div>
             </div>
           </div>
@@ -118,22 +103,6 @@
         <section class="container content-section">
             <div class="catalogo-items" id="misProductos"></div>
         </section>
-         <!-- <section class="container content-section">
-            <h2 class="section-header">PEDIDO</h2>
-            <div class="cart-row">
-              <span class="cart-item cart-header cart-column">PRODUCTO</span>
-              <span class="cart-precio cart-header cart-column">PRECIO</span>
-              <span class="cart-cantidad cart-header cart-column">CANT</span>
-            </div>
-            <div class="cart-items"></div>
-            <div class="cart-total">
-              <strong class="cart-total-text">Total</strong>
-              <span class="cart-total-precio">$0</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="button">
-              COMPRAR
-            </button>
-          </section>  -->
           <footer>
             <div class="footer-banner">
               <div class="container sec-foo" id="contact">
