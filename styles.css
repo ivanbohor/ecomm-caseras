@@ -22,33 +22,27 @@ html {
   scroll-behavior: smooth;
 }
 /*sections colors */
+#sec-sab{
+  background-color: #ffff89;
+}
 #sec-about{
   background-color: #ffff89;
 }
 #sec-ele{
   background-color:  #ffcc50;
 }
-#sec-clien{
-
-}
-
 /* PRUEBA ARREGLEO FIX OPTIONS CART */
 #info {
-
   display: none;
-}
-
-#dirr {
 }
 
 #info.show, #dirr.show {
   display: block;
+  color: #626a6a;
 }
-
-
-
-
-
+#altu{
+  color: #626a6a;
+}
 /* TEXT STYLE */
 .h2-title{
   font-size: 38px;
@@ -69,8 +63,8 @@ img{
 }
 .logo{
   width: 120px;
-  height: 100px;
-  border-radius:20px;
+  height: 115px;
+    border-radius: 25px;
 }
 
 
@@ -106,7 +100,8 @@ img{
 /* responsive en note  */
 @media screen and (max-width: 1200px){
 .carru-tex1{
-  width: 85%;
+  width: 80%;
+  margin-top: 2rem;
 }
  }
 
@@ -124,7 +119,7 @@ img{
 }
 .carrousel a{
   text-decoration: none;
-  color: #fff;
+  color: azure;
 }
 .carrousel,
 .carrousel * {
@@ -371,6 +366,32 @@ header .container{
     background: #ff9800;
     opacity: 0.96;
 }
+
+.navbar-collapse a{
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-collapse  a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #FFEB5B;
+  ;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.navbar-collapse  a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 .navbar-brand{
     font-size: 1.5rem;
     font-weight: 600;
@@ -384,17 +405,27 @@ header .container{
   
 
 }
-
+.redes-nav i:hover{
+  transform: scale(1.2, 1.2);
+}
 
 /*responsive notebook */
 @media screen and (min-width:1000px) and (max-width: 1200px){
   .navbar{
     height: 21%;  }
     .logo{
-      width: 100px;
-      height: 80px;
+      width: 92px;
+      height: 92px;
     }
    }
+
+/*responsive TABLET */
+/*  .boxescon{
+    flex-direction: row;
+    align-items: inherit;
+    } */
+
+
 
 /* nav index*/
 @media screen and (min-width: 1000px){
@@ -430,8 +461,9 @@ header .container{
     gap: 1rem;
     font-size:21px
   }
-  .cart{
   
+  .fa-shopping-cart{
+    font-size: 20px;
 
   }
 }
@@ -521,13 +553,13 @@ header .container{
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
-  border: 1px solid var(--fire-bush);
+  border: 1px solid transparent;
   background: var(--fire-bush);
   color: #fff;
   padding: 0.95rem 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: block;
-  width: 150px;
+  width: 130px;
   margin: 0.6rem auto;
   transition: var(--trans);
   -webkit-transition: var(--trans);
@@ -536,10 +568,10 @@ header .container{
   -o-transition: var(--trans);
 }
 .btns .btn:last-child{
-  background: transparent;
+  background: var(--fire-bush);
 }
 .btns .btn:first-child:hover{
-  background: transparent;
+  background:#FFEB5B ;
   color: var(--fire-bush);
 }
 .btns .btn:last-child:hover{
@@ -547,13 +579,13 @@ header .container{
   color: #fff;
 }
 
-/* SECTION ELEJIRNOS */
-.eleji-section{
+/* SECTION elegi */
+.elegi-section{
   height: 80vh;
   display: flex;
 }
 @media (max-width: 1100px){
-  .eleji-section{
+  .elegi-section{
     height: 80vh;
   }
 }
@@ -582,6 +614,9 @@ header .container{
   .boxes img{
     width: 240px;
   }
+  .boxpri img{
+    width: 255px;
+  }
 }
 
 /* Section Clientes*/
@@ -597,10 +632,15 @@ header .container{
   gap: 0.5rem;
 }
 .conta-cli img{
-  border-radius: 20px;
+  border-radius: 15px;
+}
+.conta-cli h2{
+  align-self: center;
+    width: 160px;
+    font-size: 28px;
 }
 .boxpri{
-  width:250px;
+  width:280px;
 
 }
 .box-opi{
@@ -850,6 +890,9 @@ padding: 1rem;
 .con i{
   font-size:28px;
 }
+.con i:hover{
+  transform: scale(1.2, 1.2);
+}
 .boxescon{
   display: flex;
     flex-direction: column;
@@ -859,6 +902,9 @@ padding: 1rem;
 @media screen and (max-width: 1300px){
   .boxescon{
     justify-content: center;
+  }
+  .bloq{
+    gap: 1rem;
   }
    }
 .boxescon a{
@@ -914,6 +960,9 @@ footer .bra{
   background: none;
   color: var(--granite-gray);
   position: relative;
+}
+#cart-btn:hover{
+  transform: scale(1.1,1.1);
 }
 #cart-count-info{
   position: absolute;
@@ -1073,12 +1122,15 @@ background: #ffff89;
   border-radius: 10px;
   margin: 0.5rem;
   padding: 5px;
+}
+#inputAl{
+  background: border-box;
+  border-radius: 10px;
+  margin: 0.2rem;
+  padding: 4px;
 
 }
-/* #checkEntrega span {
-  color: #626a6a;
-} */
-/* responsive mobile */
+
 
 /* responsive mobile FOR MIN*/
 
@@ -1089,8 +1141,9 @@ background: #ffff89;
     margin-left: 1rem;
   }
   .logo{
-    width: 90px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
   }
   .show-navbar{
     background-color: #ffeb5b ;
@@ -1103,6 +1156,7 @@ background: #ffff89;
   .redes-nav{
     display: none;
   }
+ 
   .h2-title {
     font-size: 32px;
   } 
@@ -1145,8 +1199,8 @@ background: #ffff89;
   gap: 1rem;
 }
 
-/* SECTION ELEJIR */
-.eleji-section{
+/* SECTION elegi */
+.elegi-section{
   height: 100%;
 }
 .bloq{

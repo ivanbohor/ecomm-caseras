@@ -7,12 +7,6 @@ fetch("catalogo.json")
   })
   .then(function (datos) {
     appenddata(datos);
-    /* intengo de guardar en local storage
-    if (localStorage.getItem("carrlist")) {
-      carrito = JSON.parse(localStorage.getItem("carrlist"));
-      addItemToCart(); */
-
-    /* hasta aca  */
   })
   .catch(function (err) {
     console.log(err);
@@ -192,7 +186,6 @@ document.getElementById("close-car").addEventListener("click", () => {
     text.style.display = "none";
   }
 } */
-
 /* cuando haga click en el chek de "Retiro" que los input de 
     envio->direcion/altura se borren o reseteen */
 /* const checkBox1 = document.getElementById("radio-1"); /* retiro */
