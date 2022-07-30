@@ -11,14 +11,13 @@
 
     <meta name="description" content="Empanadas, copetin y pizetas artesanales, la comida ideal para tu evento o reunion. Atencion a catering">
   </head>
-  <body>
+  <body style="background-color:#ffff89;">
     <!-- agrego header y nav !-->
     <header>
       <div class="container">
         <!-- navbar -->
         <nav class="navbar">
           <a href="index.html" class="navbar-brand">
-            
             <img src="./img/caseLOG.svg" alt="logo" class="logo"
           /></a>
           <button type="button" aria-label="menu" class="navbar-toggler">
@@ -73,7 +72,6 @@
                         <input type="text" name="address" id="inputAl" 
                         minlength="0" maxlength="10" size="8" >
                       </div>
-                  
                       <div class="pago">
                         <h4>Abono con  : </h4>
                         <div>
@@ -90,7 +88,6 @@
                           <div id="dirr"></div>
                           <div id="altu"></div>
                         </div>
-
                        </div>
                   <button style="background-color: #25D366;" id="buyWp" aria-label="comprar pedir" class="btn btn-primary btn-purchase" type="button">
                     COMPRAR
@@ -99,14 +96,46 @@
               </div>
             </div>
           </div>
-          </div>
+        </div>
         </nav>
       </header>
-        <section class="container content-section">
-            <div class="catalogo-items" id="misProductos"></div>
-            <div class="copetin" id="cope">Copetines</div>
-            <div class="pize">Pizetas</div>
-            <div class="sangu">Sandwich</div> 
+        <section class="container content-market">
+            <div class="catalogo-items" id="empa">
+              <div class="box-cat">
+                <div class="empaBig box-big"> 
+                  <img src="./img/empaback2.jpg" alt="empanadas">
+                </div>
+                <div class="empaList box-list" id="empaList">
+                </div>
+              </div>
+            </div>
+            <div class="copetin" id="cope">
+              <div class="box-cat"> 
+              <div class="copeBig box-big">
+                <img src="./img/copeU.jpg" alt="copetin">
+              </div>
+              <div class="copeList box-list" id="copeList">
+              </div>
+              </div>
+            </div>
+            <div class="pize">
+              <div class="box-cat"> 
+                <div class="pizeBig box-big">
+                  <img src="./img/pizeEco.jpg" alt="">
+                </div>
+                <div class="pizeList box-list" id="pizeList">
+                </div>
+              </div>
+            </div>
+            <div class="sangu">
+              <div class="box-cat">
+                <div class="sandBig box-big">
+                  <img src="./img/sandEco.jpg" alt="">
+                </div>
+                <div class="sandList box-list" id="sandList">
+                </div>
+              </div>
+            </div> 
         </section>
           <footer>
             <div class="footer-banner">

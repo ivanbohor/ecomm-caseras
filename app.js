@@ -1,5 +1,5 @@
 // numero de telefono 52+1+numero(10 digitos)
-const cellPhoneNumber = "5491131155989";
+const cellPhoneNumber = "5491123920404";
 
 fetch("catalogo.json")
   .then(function (response) {
@@ -13,19 +13,67 @@ fetch("catalogo.json")
   });
 
 function appenddata(datos) {
-  const contenedor = document.getElementById("misProductos");
-  /* pinto los productos en el market  */
-  for (let i = 0; i < datos.length; i++) {
+  /*   filtrado por categoria
+   */ const catePize = datos.filter((c) => c.category == "pize");
+  const cateEmp = datos.filter((c) => c.category == "empa");
+  const cateCope = datos.filter((c) => c.category == "cope");
+  const cateSand = datos.filter((c) => c.category == "sand");
+  /* pintado en div segun correspoda */
+  const contenedorPize = document.getElementById("pizeList");
+  const contenedorEmpa = document.getElementById("empaList");
+  const contenedorCope = document.getElementById("copeList");
+  const contenedorSand = document.getElementById("sandList");
+  /* for para cada cate y contenedor*/
+  for (let i = 0; i < catePize.length; i++) {
     const productDiv = document.createElement("div");
     productDiv.className = "shop-item";
     productDiv.innerHTML = `
-      <span class="shop-item-title" > ${datos[i].producto}</span >
-        <img class="shop-item-image" src="${datos[i].imgUrl}">
+      <span class="shop-item-title" > ${catePize[i].producto}</span >
+        <img class="shop-item-image" src="${catePize[i].imgUrl}">
           <div class="shop-item-details">
-            <span class="shop-item-price">$${datos[i].precio}</span>
+            <span class="shop-item-price">$${catePize[i].precio}</span>
             <button value="+1" onClick="contadorCar();" class="btn btn-primary shop-item-button" aria-label="agregar pedir" type="button">AÑADIR</button>
           </div>`;
-    contenedor.appendChild(productDiv);
+    contenedorPize.appendChild(productDiv);
+  }
+
+  for (let i = 0; i < cateEmp.length; i++) {
+    const productDiv = document.createElement("div");
+    productDiv.className = "shop-item";
+    productDiv.innerHTML = `
+      <span class="shop-item-title" > ${cateEmp[i].producto}</span >
+        <img class="shop-item-image" src="${cateEmp[i].imgUrl}">
+          <div class="shop-item-details">
+            <span class="shop-item-price">$${cateEmp[i].precio}</span>
+            <button value="+1" onClick="contadorCar();" class="btn btn-primary shop-item-button" aria-label="agregar pedir" type="button">AÑADIR</button>
+          </div>`;
+    contenedorEmpa.appendChild(productDiv);
+  }
+
+  for (let i = 0; i < cateCope.length; i++) {
+    const productDiv = document.createElement("div");
+    productDiv.className = "shop-item";
+    productDiv.innerHTML = `
+      <span class="shop-item-title" > ${cateCope[i].producto}</span >
+        <img class="shop-item-image" src="${cateCope[i].imgUrl}">
+          <div class="shop-item-details">
+            <span class="shop-item-price">$${cateCope[i].precio}</span>
+            <button value="+1" onClick="contadorCar();" class="btn btn-primary shop-item-button" aria-label="agregar pedir" type="button">AÑADIR</button>
+          </div>`;
+    contenedorCope.appendChild(productDiv);
+  }
+
+  for (let i = 0; i < cateSand.length; i++) {
+    const productDiv = document.createElement("div");
+    productDiv.className = "shop-item";
+    productDiv.innerHTML = `
+      <span class="shop-item-title" > ${cateSand[i].producto}</span >
+        <img class="shop-item-image" src="${cateSand[i].imgUrl}">
+          <div class="shop-item-details">
+            <span class="shop-item-price">$${cateSand[i].precio}</span>
+            <button value="+1" onClick="contadorCar();" class="btn btn-primary shop-item-button" aria-label="agregar pedir" type="button">AÑADIR</button>
+          </div>`;
+    contenedorSand.appendChild(productDiv);
   }
 
   var addToCartButtons = document.getElementsByClassName("shop-item-button");
@@ -172,24 +220,6 @@ document.getElementById("cart-btn").addEventListener("click", () => {
 document.getElementById("close-car").addEventListener("click", () => {
   cartContainer.classList.toggle("show-cart-container");
 });
-//  si se selecciona "Envio"  ///
-/* function entregaCheck() {
-  let checkBox1 = document.getElementById("radio-1");
-  let checkBox = document.getElementById("radio-2");
-  let text = document.getElementById("dire");
-  if (checkBox.checked == true) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-  if (checkBox1.checked == true) {
-    text.style.display = "none";
-  }
-} */
-/* cuando haga click en el chek de "Retiro" que los input de 
-    envio->direcion/altura se borren o reseteen */
-/* const checkBox1 = document.getElementById("radio-1"); /* retiro */
-/* const checkEnvio = document.getElementById("radio-2"); /* selec envio */
 
 function getValue() {
   var checkboxes = document.querySelectorAll(".radio-custom");
@@ -201,25 +231,6 @@ function getValue() {
   }
   document.getElementById("checkEntrega").innerText = result;
 }
-/* Copia direc y alt ingresada  ORIGINALL ACA-DESPUES ACTIVAR */
-/* function direData(val) {
-  document.getElementById("dirr").innerHTML = val;
-}
-function altuData(val) {
-  document.getElementById("altu").innerHTML = val;
-} */
-
-/* const checkBox1 = document.getElementById("radio-1"); 
-const checkEnvio = document.getElementById("radio-2"); 
-const inputDir = document.getElementById("input");
-const showAddressInformation = (e) => {
-  if (e.target === checkBox1 && e.target.checked) {
-    inputDir.value = "";
-  }
-};
-
-checkBox1.addEventListener("change", showAddressInformation); */
-
 const radioRetiro = document.getElementById("radio-1");
 const radioEnvio = document.getElementById("radio-2");
 const input = document.getElementById("input");
@@ -263,5 +274,4 @@ const addAddressToParagraphAl = (e) => {
 radioEnvio.addEventListener("change", showAddressInformation);
 radioRetiro.addEventListener("change", showAddressInformation);
 input.addEventListener("input", addAddressToParagraph);
-
 inputA.addEventListener("input", addAddressToParagraphAl);

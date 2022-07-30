@@ -97,12 +97,17 @@ img{
     text-align: center;
     border-radius: 10px;
 }
+.carru-tex1 h2{
+  font-size:1.4rem
+}
 /* responsive en note  */
 @media screen and (max-width: 1200px){
 .carru-tex1{
   width: 80%;
   margin-top: 2rem;
+  font-size: 1.3rem;
 }
+
  }
 
 .carru-text1 h1{
@@ -241,6 +246,9 @@ img{
   .sec-text{
     width: auto;
   }
+  
+
+
 
 }
 
@@ -411,20 +419,28 @@ header .container{
 
 /*responsive notebook */
 @media screen and (min-width:1000px) and (max-width: 1200px){
+  .catalogo-items{
+    margin-top: 8rem !important;
+  }
   .navbar{
     height: 21%;  }
     .logo{
       width: 92px;
       height: 92px;
     }
+    .box-big{
+      width: 300px !important;
+
+    }
+    .shop-item {
+      margin: 15px  !important;
+      width: 140px  !important;
+       }
+    
+.shop-item-image{ 
+  height: 175px !important;
+}
    }
-
-/*responsive TABLET */
-/*  .boxescon{
-    flex-direction: row;
-    align-items: inherit;
-    } */
-
 
 
 /* nav index*/
@@ -550,17 +566,17 @@ header .container{
     gap: 1rem;
 }
 .btn{
-  font-size: 1rem;
+  font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
   border: 1px solid transparent;
   background: var(--fire-bush);
   color: #fff;
-  padding: 0.95rem 0;
-  letter-spacing: 1px;
+  padding: 0.80em 0.47em;
+    letter-spacing: 1px;
   display: block;
-  width: 130px;
-  margin: 0.6rem auto;
+  width: auto;
+  margin: 0.4rem auto;
   transition: var(--trans);
   -webkit-transition: var(--trans);
   -moz-transition: var(--trans);
@@ -654,15 +670,16 @@ header .container{
 .btn {
   text-align: center;
   vertical-align: middle;
-  padding: 0.67em 0.67em;
   cursor: pointer;
   border-radius: 10px;
+}
+#buyWp{
+  width:auto;
 }
 
 .btn-primary {
   color: white;
   border: none;
-  border-radius: 0.3em;
   font-weight: bold;
 }
 
@@ -685,8 +702,9 @@ header .container{
 }
 
 .shop-item {
-  margin: 30px;
-  width: 200px;
+  margin: 20px;
+  width: 150px;
+  align-self: center;
 }
 
 .shop-item-title {
@@ -695,13 +713,13 @@ header .container{
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #333;
   margin-bottom: 15px;
 }
 
 .shop-item-image {
-  height: 250px;
+  height: 200px;
   border-radius: 20px;
 }
 
@@ -725,14 +743,11 @@ header .container{
 }
 
 .catalogo-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin-top: 6rem;
+      justify-content: center;
+      margin-top: 9rem;
 }
 
 .cart-header {
@@ -949,6 +964,24 @@ footer .bra{
 
 /* PRODUCTS */
 
+.box-cat{
+  display:flex;
+
+}
+.box-list{
+  display:flex;
+}
+
+.box-big{
+  display:flex;
+  align-self: center;
+  width: 400px;
+  height: 250px;
+  margin: 2rem;
+}
+.box-big img{
+  border-radius: 20px;
+}
 
 .cart-list{
   height: 100vh;
@@ -1013,7 +1046,7 @@ background: #ffff89;
 .show-cart-container{
   display: block;
 }
-/*  */
+/*   */
 #close-car{
   background: none;
     border: none;
@@ -1177,7 +1210,7 @@ background: #ffff89;
 .carru-tex1 h1{
   font-size: 35px;
 }
-.carru-text2 h3{
+.carru-text2 p{
   display: none;
 }
 
@@ -1211,10 +1244,14 @@ background: #ffff89;
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
-.content-section{
+.content-market{
   display: flex;
   flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 .saboimg img {
   width: 200px;
@@ -1222,16 +1259,18 @@ background: #ffff89;
 .bloqsabo{
   gap: 1rem;
 }
+.sobotx h3 {
+  font-size: 23px;
+}
 .sobotx{
   width: 100%;
 }
 
 /*section about pedilas RESPONSIVE */
 .about{
-  height: 100%;
+  height: auto;
   flex-direction: column;
   gap: 2rem;
-  margin: 1rem 0rem 2rem 0rem;
 }
 .conte-about{
   font-size: 18px;
@@ -1287,6 +1326,46 @@ background: #ffff89;
   font-size: 16px;
 }
 /*ecommerce whats responsive */ 
+
+.content-market {
+  display: flex;
+  flex-direction: column;
+   }
+   .catalogo-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+    flex-direction: column;
+    align-content: center;
+}
+.box-cat {
+  display: flex;
+  flex-direction: column;
+}
+.empaBig{
+  margin-top: 3rem !important;
+}
+.box-big {
+  display: flex;
+  align-self: center;
+  width: 325px;
+  height: 200px;
+  margin: 1.5rem;
+}
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shop-item {
+  margin: 10px;
+   }
+
+.shop-item-title{
+  height: 60px;
+  margin-bottom: 6px;
+}
 .cart-container{
 left: 0;
 width: 100%;
@@ -1312,6 +1391,9 @@ width: 100%;
   width: 90px;
     height: 50%;
 
+}
+.btn{
+  font-size:15px;
 }
 
 }
